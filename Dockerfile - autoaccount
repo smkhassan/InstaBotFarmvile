@@ -1,0 +1,12 @@
+FROM python:3.7.2-slim
+
+WORKDIR /app2
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+VOLUME /app2/
+
+CMD [ "python3", "./botAccountCreator.py" ]
