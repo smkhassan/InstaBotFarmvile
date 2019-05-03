@@ -1,7 +1,6 @@
 ## InstaBotAuto
 
 - Clone Repository
-- git clone https://github.com/smkhassan/instabotauto.git
 
 - Please install all requirements:
 
