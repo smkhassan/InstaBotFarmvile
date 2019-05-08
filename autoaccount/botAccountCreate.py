@@ -97,26 +97,30 @@ def insta():
         email = random_surname() + '_' + account.generatingEmail()
         email_field.send_keys(email)
         time.sleep(2)
-        print("We registered with email "+ email )
+        print("We registered with email : "+ email )
+
         #Fill the fullname value
         fullname_field = browser.find_element_by_name('fullName')
         action_chains.move_to_element(fullname_field)
         fullname = account.generatingName()
         fullname_field.send_keys(fullname)
         time.sleep(2)
-        print("We registered with name" + fullname )
+        print("We registered with name : " + fullname )
+
         #Fill username value
         username_field = browser.find_element_by_name('username')
         name2 = ( name + guess_number())
         action_chains.move_to_element(username_field)
         time.sleep(2)
         username_field.send_keys(name2)
-        print("We registered using this username" + name2 )
+        print("We registered using this username : " + name2 )
+
         #Fill password value
         password_field  = browser.find_element_by_name('password')
         action_chains.move_to_element(password_field)
+        password = ('aa12345bb12345cc'+ name2 )
         time.sleep(2)
-        password_field.send_keys('aa12345bb12345cc'+name) #You can determine another password here.
+        password_field.send_keys(password) #You can determine another password here.
         ################################################################################################################################################
         #checks if submit is there and is clickable
         try:
@@ -150,12 +154,18 @@ def insta():
         try:
             next = browser.find_element_by_xpath('/html/body/div[3]/div/div[3]/div/button')
             if next.is_displayed() and next.is_enabled():
-                print("Next bar is there and going to save now credentials")
+                print("Next bar is there and going to save now credentials/AccountUsernames For Follow4Follow")
                 next.click()
                 f = open('../instabut/examples/secret.txt','a')
-                f.write( name2 + ':' + ('aa12345bb12345cc'+name2))
+                f.write( name2 + ':' + ('aa12345bb12345cc'+ name2))
                 f.write('\n')
                 f.close()
+                ##follow4follow
+                f = open('../instabut/examples/usernames.txt','a')
+                f.write(name2)
+                f.write('\n')
+                f.close()
+                ###Finish
                 browser.close()
         except NoSuchElementException:
             print('Error found in next! , aborted!')
