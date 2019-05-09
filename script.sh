@@ -1,0 +1,1 @@
+#!/usr/bin/env bashcat ./instabut/examples/secret.txt | while IFS=':' read userName password;do echo "$userName" echo "$password";done 
