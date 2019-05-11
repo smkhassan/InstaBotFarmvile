@@ -30,13 +30,8 @@ python ./autoaccount/botAccountCreate.py
 ((counter++))
 done
 
-#generating so we can follow
-cat ./instabut/examples/usernames.txt | while read LINE; do \
-    echo $LINE \
 
-done
-
- cd ./instabut/examples/
+cd ./instabut/examples/
 #storing user and password to variable and using this as main loop for other scripts
 
 cat < ./secret.txt | while IFS=: read -r userName password; do \
