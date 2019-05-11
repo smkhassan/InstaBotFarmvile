@@ -12,6 +12,7 @@ if [[ $input == "Y" || $input == "y" ]]; then
         sudo pip innstall selenium
         sudo pip install pyvirtualdisplay
         sudo pip install Pillow
+        sudo pip install instabot
         wget https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip
         unzip -o chromedriver_linux64.zip > ./autoaccount/chromedriver
 
@@ -35,32 +36,29 @@ cat ./instabut/examples/usernames.txt | while read LINE; do \
 
 done
 
-
+ cd ./instabut/examples/
 #storing user and password to variable and using this as main loop for other scripts
 
-cat < ./instabut/examples/secret.txt | while IFS=: read -r userName password; do \
+cat < ./secret.txt | while IFS=: read -r userName password; do \
  echo "$userName"
  echo "$password";
+
 limit=10
 counter=1
 while [ $counter -le $limit ]
 do
 ##upload pictures
-python ./instabut/examples/photos/upload_photos.py -u $userName -p $password
+python ./upload_photos.py -u $userName -p $password
 ##follows users from a file
-python ./instabut/examples/follow_users_from_file.py -u $userName -p $password filepath ./instabut/examples/usernames.txt
+python ./follow_users_from_file.py -u $userName -p $password ./usernames.txt
 ##likes last images from hashtags
-python ./instabut/examples/like_hashtags.py -u $userName -p $password hashtags hkrestaurant,hkrestaurants,hkstartup,hkbusiness,hkcafe
+python ./like_hashtags.py -u $userName -p $password  hkrestaurant,hkrestaurants,hkstartup,hkbusiness,hkcafe
+##comments Hashtags
+python ./comment/comment_hashtags.py -u $userName -p $password ./comments.txt hkrestaurant,hkrestaurants,hkstartup,hkbusiness,hkcafe
+##messages all Followers
+python ./message.py -u awesomebarbara22 -p Don735zari@@ -users ./notified_users.txt -message "Hi there, did you see my comment?  🙂 Just wanted to check if you wanted to hear more about the digital growth program we offer. Have a couple of seats left, so let me know if you’re interested (or not) haha."
 done
 
-
+echo DONE
 
 done
-
-
-
-
-
-
-
-

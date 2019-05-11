@@ -4,3 +4,30 @@
 2019-05-01 19:07:14,746 Request returns 503 error!
 2019-05-01 19:07:14,748 Error checking for `feedback_required`, response text is not JSON
 2019-05-02 09:24:27,613 Instabot Started
+2019-05-10 17:25:13,240 Instabot Started
+2019-05-10 17:25:38,883 Instabot Started
+2019-05-10 17:25:40,035 Logged-in successfully as 'awesomebarbara22'!
+2019-05-10 17:25:40,037 Going to follow 4 users.
+2019-05-10 17:25:41,006 Error checking for `feedback_required`, response text is not JSON
+2019-05-10 17:27:31,036 Instabot Started
+2019-05-10 17:27:32,414 Logged-in successfully as 'awesomebarbara22'!
+2019-05-10 17:27:32,416 Going to like media with hashtag #hkrestaurant.
+2019-05-10 17:27:35,415 Going to like 78 medias.
+2019-05-10 17:27:49,711 Instabot Started
+2019-05-10 17:27:51,359 Logged-in successfully as 'awesomebarbara22'!
+2019-05-10 17:27:51,359 Going to like media with hashtag #hkrestaurant,hkstartup.
+2019-05-10 17:27:51,611 Error checking for `feedback_required`, response text is not JSON
+2019-05-10 17:27:51,640 Nothing to like.
+2019-05-10 17:27:51,910 Bot stopped. Worked: 0:02:13.027981
+2019-05-10 17:27:51,911 Total requests: 11
+2019-05-10 17:28:16,047 Instabot Started
+2019-05-10 17:28:17,676 Logged-in successfully as 'awesomebarbara22'!
+2019-05-10 17:28:17,676 Going to like media with hashtag #hkrestaurant+hkstartup.
+2019-05-10 17:28:17,878 Error checking for `feedback_required`, response text is not JSON
+2019-05-10 17:28:17,904 Nothing to like.
+2019-05-10 17:28:18,292 Bot stopped. Worked: 0:02:39.409726
+2019-05-10 17:28:18,292 Total requests: 12
+2019-05-11 13:53:27,033 Instabot Started
+2019-05-11 13:53:28,151 Logged-in successfully as 'awesomebarbara22'!
+2019-05-11 13:53:29,208 Bot stopped. Worked: 20:27:50.325308
+2019-05-11 13:53:29,208 Total requests: 14
