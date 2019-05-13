@@ -20,8 +20,6 @@ else
         echo "don't do that"
 fi
 
-
-
 limit=10
 counter=1
 while [ $counter -le $limit ]
