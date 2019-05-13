@@ -33,7 +33,7 @@ python ./autoaccount/botAccountCreate.py
 cat < ./instabut/examples/secret.txt | while IFS=: read -r userName password; do \
 python ./autoaccount/pictureprofile.py -u $userName -p $password
 done
-echo DONE 
+echo DONE
 done
 
 cd ./instabut/examples/
@@ -56,7 +56,7 @@ python ./like_hashtags.py -u $userName -p $password  hkrestaurant,hkrestaurants,
 ##comments Hashtags
 python ./comment/comment_hashtags.py -u $userName -p $password ./comments.txt hkrestaurant,hkrestaurants,hkstartup,hkbusiness,hkcafe
 ##messages all Followers
-python ./message.py -u awesomebarbara22 -p Don735zari@@ -users ./notified_users.txt -message "Hi there, did you see my comment?  🙂 Just wanted to check if you wanted to hear more about the digital growth program we offer. Have a couple of seats left, so let me know if you’re interested (or not) haha."
+python ./message.py -u $userName -p $password -users ./notified_users.txt -message "Hi there, did you see my comment?  🙂 Just wanted to check if you wanted to hear more about the digital growth program we offer. Have a couple of seats left, so let me know if you’re interested (or not) haha."
 done
 
 echo DONE
