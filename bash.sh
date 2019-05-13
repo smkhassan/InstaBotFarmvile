@@ -26,10 +26,15 @@ limit=10
 counter=1
 while [ $counter -le $limit ]
 do
+##creates accounts
 python ./autoaccount/botAccountCreate.py
 ((counter++))
+##changes DP
+cat < ./instabut/examples/secret.txt | while IFS=: read -r userName password; do \
+python ./autoaccount/pictureprofile.py -u $userName -p $password
 done
-
+echo DONE 
+done
 
 cd ./instabut/examples/
 #storing user and password to variable and using this as main loop for other scripts
